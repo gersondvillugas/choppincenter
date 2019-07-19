@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Home">
+
+    <ScrollView
+        android:id="@+id/scrollHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/toolbar"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/banner__container"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="125dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/rodion" />
+
+                <TextView
+                    android:id="@+id/text__banner"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="26dp"
+                    android:textSize="12sp"
+                    android:text="La tecnologia a la palma de tu mano"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:layout_width="72dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/idis"
+                    android:layout_alignStart="@+id/text__banner"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="75dp"
+                    android:background="@drawable/corner_button"
+                    android:text="Iniciar Sesion"
+                    android:onClick="irlog"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="9sp" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:onClick="irall"
+
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/todas_las_caracteristicas"/>
+                    <TextView
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textColor="#EEFFFFFF"
+                        android:text="Todas las categorias"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iniciarsecio"
+                        android:layout_width="52dp"
+                        android:onClick="irhistorial"
+
+                        android:layout_height="52dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/carrito"/>
+                    <TextView
+
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textColor="#EEFFFFFF"
+                        android:text="Compras"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:onClick="irSugerencia"
+                        android:layout_height="52dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/tablets"/>
+                    <TextView
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textColor="#EEFFFFFF"
+                        android:text="Sugerencia"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:onClick="irContacto"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:src="@drawable/call"/>
+                    <TextView
+                        android:layout_width="52dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="10sp"
+                        android:textColor="#EEFFFFFF"
+                        android:text="Contacto"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/header_artefact_list"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="20dp"
+                android:elevation="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BUSQUEDAS RECIENTES"
+                    android:layout_centerVertical="true"
+                    android:textFontWeight="bold"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <ListView
+                android:id="@+id/lstDatos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/cmbCategoria"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</android.support.v4.widget.DrawerLayout>
